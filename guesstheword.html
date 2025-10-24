@@ -17,10 +17,16 @@
 
         :root{
 
-            --theme-color: rgb(167, 157, 221);
+            --buttons-color: rgb(167, 157, 221);
             --text-color: white;
-            --button-color: rgb(63, 17, 106);
+            --hover-color: rgb(63, 17, 106);
+            --disabled-button: rgba(167, 157, 221, 0.5)
+        
 
+        }
+
+        body{
+            background-color: lightsteelblue;
         }
 
         #guess-the-word-section{
@@ -32,7 +38,7 @@
             gap: 20px;
 
             width: 75%;
-            height: 450px;
+            min-height: 450px;
 
             background-color: lightsteelblue;
 
@@ -52,7 +58,7 @@
             gap: 5px;
 
             width: 100%;
-            height: 50px;
+            
 
         }
 
@@ -61,7 +67,7 @@
             width: 40px;
             height: 40px;
 
-            background-color: var(--theme-color);
+            background-color: var(--buttons-color);
             color: var(--text-color);
             
             align-content: center;
@@ -77,7 +83,7 @@
 
         .alphabet-styling:disabled{
 
-            background-color: rgba(167, 157, 221, 0.5);
+            background-color: var(--disabled-button);
             color: rgba(255, 255, 255, 0.51);
             cursor: not-allowed;
 
@@ -117,7 +123,7 @@
             align-content: center;
             text-align: center;
 
-            color: var(--button-color);
+            color: var(--hover-color);
             /* text-transform: capitalize; */
 
 
@@ -128,8 +134,8 @@
             width: 130px;
             height: 45px;
 
-            background-color: var(--theme-color);
-            border: 1px solid var(--theme-color);
+            background-color: var(--buttons-color);
+            border: 1px solid var(--buttons-color);
 
             font-size: 22px;
             font-weight: 700;
@@ -141,10 +147,22 @@
         
         #restart-button:hover{
 
-            background-color: var(--button-color);
-            border: 1px solid var(--button-color);
+            background-color: var(--hover-color);
+            border: 1px solid var(--hover-color);
             cursor: pointer;
 
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            #alphabet-block{
+
+                flex-wrap: wrap;            
+
+            }
+
+          
+            
         }
 
     </style>
