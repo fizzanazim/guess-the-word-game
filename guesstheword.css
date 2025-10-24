@@ -1,0 +1,153 @@
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+:root {
+
+    --buttons-color: rgb(167, 157, 221);
+    --text-color: white;
+    --hover-color: rgb(63, 17, 106);
+    --disabled-button: rgba(167, 157, 221, 0.5)
+}
+
+body {
+    background-color: lightsteelblue;
+}
+
+#guess-the-word-section {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+    width: 75%;
+    min-height: 450px;
+
+    background-color: lightsteelblue;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+#alphabet-block {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
+    width: 100%;
+
+
+}
+
+.alphabet-styling {
+
+    width: 40px;
+    height: 40px;
+
+    background-color: var(--buttons-color);
+    color: var(--text-color);
+
+    align-content: center;
+    text-align: center;
+
+    border-radius: 100%;
+    border: transparent;
+    font-weight: 700;
+
+    cursor: pointer;
+
+}
+
+.alphabet-styling:disabled {
+
+    background-color: var(--disabled-button);
+    color: rgba(255, 255, 255, 0.51);
+    cursor: not-allowed;
+
+}
+
+#enter-words-block {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: 100%;
+    height: 60px;
+
+}
+
+.underscore-div {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 30px;
+    height: 50px;
+
+    font-size: 28px;
+    font-weight: 700;
+
+}
+
+#message-block {
+
+    font-size: 28px;
+    font-weight: 700;
+
+    align-content: center;
+    text-align: center;
+
+    color: var(--hover-color);
+    /* text-transform: capitalize; */
+
+
+}
+
+#restart-button {
+
+    width: 130px;
+    height: 45px;
+
+    background-color: var(--buttons-color);
+    border: 1px solid var(--buttons-color);
+
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text-color);
+    transition: 0.4s;
+
+}
+
+
+#restart-button:hover {
+
+    background-color: var(--hover-color);
+    border: 1px solid var(--hover-color);
+    cursor: pointer;
+
+}
+
+@media screen and (max-width: 1300px) {
+
+    #alphabet-block {
+
+        flex-wrap: wrap;
+
+    }
+
+}
